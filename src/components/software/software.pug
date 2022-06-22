@@ -1,0 +1,34 @@
+mixin softwareList(props)
+  -var props = props || {}
+  -var photoshop = props.photoshop || '91'
+  -var illustrator = props.illustrator || '70'
+  -var indesign = props.indesign || '56'
+
+  -var dreamweaver = props.dreamweaver || '82'
+  -var afterEffects = props.afterEffects || '61'
+  -var htmlCss = props.htmlCss  || '91'
+
+  section.software
+    +chapter('software', 4)
+
+    .software__list
+      .software__item-left
+        p.software__title_left-block  photoshop
+        progress.software__progress_left-block(value= photoshop, max='100')
+
+        p.software__title_left-block  illustrator
+        progress.software__progress_left-block(value= illustrator, max='100')
+
+        p.software__title_left-block  indesign
+        progress.software__progress_left-block(value= indesign, max='100')
+
+
+      .software__item-right
+        p.software__title_right-block  dreamweaver
+        progress.software__progress_right-block(value= dreamweaver, max='100')
+
+        p.software__title_right-block  after effects
+        progress.software__progress_right-block(value= afterEffects, max='100')
+
+        p.software__title_right-block  html&css3
+        progress.software__progress_right-block(value= htmlCss, max='100')

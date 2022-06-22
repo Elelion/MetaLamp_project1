@@ -1,0 +1,31 @@
+mixin skillsList(props)
+  -var props = props || {}
+  -var creative = props.creative || '4'
+  -var teamwork = props.teamwork || '11'
+  -var innovate = props.innovate || '8'
+  -var communication = props.communication || '18'
+
+  section.skills
+    +chapter('skills', 6)
+
+    .skills__list
+      ul.skills__item
+        li.skills__point-block
+          p.skills__title creative
+          .skills__point.skills__point-creative
+            +points(creative)
+
+        li.skills__point-block
+          p.skills__title teamwork
+          .skills__point.skills__point-teamwork
+            +points(teamwork)
+
+        li.skills__point-block
+          p.skills__title innovate
+          .skills__point.skills__point-innovate
+            +points(innovate)
+
+        li.skills__point-block
+          p.skills__title communication
+          .skills__point.skills__point-communication
+            +points(communication)

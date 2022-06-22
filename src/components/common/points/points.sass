@@ -1,0 +1,30 @@
+@import ../../../mixins
+
+/**/
+
+.bar__point
+	float: left
+	margin: 1.1rem 1.45rem 0 0
+	width: 3rem
+	height: 3rem
+	border-radius: 50%
+	background: #056cb4
+
+	@media screen and (max-width: $resolution-640)
+		width: 2rem
+		height: 1.2rem
+
+	@media screen and (max-width: $resolution-480)
+		width: 1.5rem
+		height: 1.5rem
+		margin-right: 0.7rem
+
+	&:first-of-type
+		margin-left: 0
+
+	&-empty
+		float: left
+		background: #E8E8E8
+
+	&:last-child, &-empty:last-child
+		margin-right: 0

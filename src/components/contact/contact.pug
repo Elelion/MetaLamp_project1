@@ -1,0 +1,42 @@
+mixin contactList(props)
+  -var props = props || {}
+  -var address = props.address || 'Main Street, City'
+  -var email = props.email || 'contact@domain.com'
+  -var phone = props.phone || '555-555-555'
+  -var website = props.website || 'www.yourweb.com'
+
+  //-
+
+  section.contact
+    +chapter('contact', 5)
+
+    .contact__block
+      table.contact__list
+        tr.contact__item
+          td.contact__row
+            span.contact__title Address
+          td.contact__row
+            span.contact__content= address
+
+        tr.contact__item
+          td.contact__row
+            span.contact__title E-Mail
+          td.contact__row
+            a.contact__link.contact__link-mail(
+              href=`mailto: ${email}`)= email + '.'
+
+        tr.contact__item
+          td.contact__row
+            span.contact__title Phone
+          td.contact__row
+            a.contact__link.contact__link-phone(
+              href=`tel: +${phone}`)= phone + '.'
+
+        tr.contact__item
+          td.contact__row
+            span.contact__title Website
+          td.contact__row
+            a.contact__link.contact__link-site(
+              href=`${website}`,
+              target='_blank', 
+              rel='noopener noreferrer')= website + '.'

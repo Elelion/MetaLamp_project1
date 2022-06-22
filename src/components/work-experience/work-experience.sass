@@ -1,0 +1,132 @@
+@import ../../mixins
+
+/**/
+
+.work-experience
+	float: right
+	width: 100%
+	height: auto
+	margin-top: 7.1rem
+
+	/* pointer */
+	&__wrapper
+		float: left
+
+		&:before
+			float: left
+			content: ''
+			display: inline-block
+			width: 3.2rem
+			height: 3.2rem
+			margin: 1.3rem 2.5rem 0 0
+			border-radius: 50%
+			background-color: #000
+			vertical-align: middle
+
+			@media screen and (max-width: $resolution-640)
+				display: none
+
+		&:not(:nth-child(1))
+			margin-top: 3rem
+
+	&__content
+		float: left
+		width: auto
+		height: auto
+		margin: 2.1rem 0 0.01rem 8.3rem
+		padding-left: 1.9rem
+		padding-top: 0.9rem
+		font-size: 2.4rem
+		text-align: left
+		letter-spacing: -0.04rem
+		@include borderBlack
+		line-height: 1.2
+		list-style-type: none
+
+		@media screen and (max-width: $resolution-640)
+			padding-left: 0
+
+		// adjust the design for the layout
+		&:nth-child(3),
+		&:nth-child(4)
+			margin-top: 0.4rem
+
+		&:nth-child(5),
+		&:nth-child(6),
+		&:nth-child(7),
+		&:nth-child(8),
+		&:nth-child(9)
+			margin-top: 0
+
+		&-paragraph
+			float: left
+			width: 31.5rem
+			padding-top: 0.5rem
+			padding-left: 0.8rem
+			font-size: 3.8rem
+			font-weight: 700
+			@include fontFamilySectionParagraph
+			text-transform: uppercase
+			letter-spacing: 0.47rem
+			color: #056cb4
+			@include wrapping
+
+			@media screen and (max-width: $resolution-640)
+				padding-left: 0
+				font-size: 3rem
+
+			@media screen and (max-width: $resolution-480)
+				width: 21.5rem
+
+		&-comment
+			float: left
+			width: 40rem
+			margin: 0.1rem 0 0 0
+			padding: 0.2rem 0 0 0.2rem
+			@include fontFamilySectionComment
+			font-size: 3.8rem
+			@include borderGreen
+			letter-spacing: 0.3rem
+
+			@media screen and (max-width: 890px)
+				margin-left: 1.5em
+
+			@media screen and (max-width: $resolution-640)
+				margin-left: 0
+				font-size: 3rem
+
+			@media screen and (max-width: $resolution-480)
+				width: 25rem
+
+		&-description
+			float: left
+			margin: 0.3rem 0 0.4rem 1.4rem
+			padding: 0 0 0 4.6rem
+			font-size: 3.8rem
+			letter-spacing: 0.08rem
+			text-transform: uppercase
+			text-align: left
+			@include borderRed
+			clear: both
+
+			@media screen and (max-width: $resolution-640)
+				font-size: 3rem
+
+			@media screen and (max-width: $resolution-480)
+				width: 25rem
+				margin-left: 0
+				padding-left: 0
+				font-size: 2.2rem
+
+		&-text
+			float: left
+			width: auto
+			min-width: 20rem
+			height: auto
+			margin: 0 0 0 1.4rem
+			padding: 0.5rem 5.4rem 0 4.95rem
+			@include borderGreen
+
+			@media screen and (max-width: $resolution-480)
+				margin-left: 0
+				padding-left: 0

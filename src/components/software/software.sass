@@ -1,0 +1,172 @@
+@import ../../mixins
+
+/**/
+
+.software
+	float: left
+	width: 100%
+	height: auto
+	margin-top: 6.8rem
+	margin-left: 0
+	margin-bottom: 5rem
+	@include borderRed
+
+	&__list
+		float: left
+		width: auto
+		height: auto
+		margin: 0 0 0 8.2rem
+		@include borderGreen
+		letter-spacing: -.5rem
+		line-height: 1.2
+
+		@media screen and (max-width: 1840px)
+			@include flexEnabled
+			flex-direction: column
+			justify-content: center
+
+		@media screen and (max-width: 1540px)
+			width: 100%
+			flex-direction: row
+			justify-content: space-evenly
+
+		@media screen and (max-width: 1190px)
+			margin: 0
+			flex-direction: column
+			justify-content: center
+
+		& progress::-webkit-progress-value
+			background: #056cb4
+
+		// --
+
+	&__item
+		&-left
+			float: left
+			width: auto
+			margin-right: 5rem
+			@include borderRed
+
+			@media screen and (max-width: 1840px)
+				margin-right: 15rem
+
+			@media screen and (max-width: 1190px)
+				width: 46rem
+				margin: 0 auto 0 auto
+
+			@media screen and (max-width: $resolution-640)
+				width: 40rem
+
+			@media screen and (max-width: $resolution-480)
+				width: 25rem
+
+		&-right
+			float: right
+			width: auto
+			@include borderGreen
+
+			@media screen and (max-width: 1540px)
+				margin-right: 15rem
+
+			@media screen and (max-width: 1190px)
+				width: 46rem
+				margin: 0 auto 0 auto
+
+			@media screen and (max-width: $resolution-640)
+				width: 40rem
+
+			@media screen and (max-width: $resolution-480)
+				width: 25rem
+
+			// --
+
+	&__title
+		&_left-block,
+		&_right-block
+			font-size: 3.8rem
+			text-transform: uppercase
+			text-align: left
+			margin: 3.3rem 0  0 1.3rem
+			letter-spacing: 0.05rem
+
+			@media screen and (max-width: $resolution-640)
+				font-size: 3rem
+
+			@media screen and (max-width: $resolution-480)
+				font-size: 2.5rem
+
+		// --
+
+		&_left-block:nth-child(1)
+			margin: 3.3rem 0 0 1.2rem
+			letter-spacing: 0.08rem
+
+		&_left-block:nth-child(3)
+			margin: 3.7rem 0 0 1.2rem
+			letter-spacing: 0
+
+		&_left-block:nth-child(5)
+			margin: 3.4rem 0 0 1.2rem
+			letter-spacing: 0.03rem
+
+		&_right-block:nth-child(1)
+			margin: 3.2rem 0 0 0.2rem
+			letter-spacing: 0.08rem
+
+			@media screen and (max-width: 1840px)
+				margin-left: 1.3rem
+
+		&_right-block:nth-child(3)
+			margin: 3.7rem 0 0 0.2rem
+			letter-spacing: 0
+
+			@media screen and (max-width: 1840px)
+				margin-left: 1.3rem
+
+		&_right-block:nth-child(5)
+			margin: 3.5rem 0 0 0.2rem
+			letter-spacing: 0
+
+			@media screen and (max-width: 1840px)
+				margin-left: 1.3rem
+
+	// --
+
+	&__progress
+		&_left-block,
+		&_right-block
+			width: 43rem
+			height: 3.4rem
+			margin: 2.1rem 0 0 1.3rem
+			border: 0
+			background-color: #f3f3f3
+
+			@media screen and (max-width: 610px)
+				width: 94%
+
+		&_left-block:nth-child(4)
+			margin-top: 2rem
+
+
+		&_left-block:nth-child(6)
+			margin-top: 1.4rem
+
+		&_right-block:nth-child(2)
+			margin-left: 0
+
+			@media screen and (max-width: 1840px)
+				margin-left: 1.3rem
+
+		&_right-block:nth-child(4)
+			margin-left: 0
+			margin-top: 2rem
+
+			@media screen and (max-width: 1840px)
+				margin-left: 1.3rem
+
+		&_right-block:nth-child(6)
+			margin-left: 0
+			margin-top: 1.5rem
+
+			@media screen and (max-width: 1840px)
+				margin-left: 1.3rem

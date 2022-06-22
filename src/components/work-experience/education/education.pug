@@ -1,0 +1,26 @@
+mixin educationList(props)
+  -var props = props || {}
+  -var paragraph = props.paragraph || 'Paragraph Of paragraphist'
+  -var comment = props.comment || 'Feb 2020 - Jun 2021'
+  -var description = props.description || 'Description of Desc'
+  -
+    var mockText =
+      'Lorem ipsum dolors sit amet, consectetuer adipiscing ' +
+      'elit. Aenean commodo ligula eget dolor. Aenean massa. ' +
+      'Cum sociis natoque penatibus et magnis dis parturient ' +
+      'montes, nascetur ridiculus mus. Donec quam felis, ' +
+      'ultricies nec, pellentesque.'
+  -var text = props.text || mockText
+
+  //-
+
+  section.education
+    +chapter('education', 2)
+
+    .work-experience__content
+      each item in props
+        .work-experience__wrapper
+          span.work-experience__content-paragraph= item.paragraph
+          p.work-experience__content-comment= '// ' + item.comment
+          p.work-experience__content-description= item.description
+          p.work-experience__content-text= item.text

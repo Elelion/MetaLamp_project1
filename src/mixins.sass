@@ -1,0 +1,55 @@
+// fonts
+
+// section
+// comment
+@mixin fontFamilySectionComment
+	font-family: "PTsans57F", "Arial", "sans-serif"
+
+// paragraph
+@mixin fontFamilySectionParagraph
+	font-family: "PTsans77F", "Arial", "sans-serif"
+
+// general
+@mixin fontFamilyNormal
+	font-family: "PTsans55SF", "Arial", "sans-serif"
+
+@mixin fontFamilyBold
+	font-family: "PTsans75SF", "Arial", "sans-serif"
+
+
+// borders
+// border-color: transparent - enable only for debugging
+@mixin borderBlack
+	border: 1px solid black
+	border-color: transparent
+
+@mixin borderGreen
+	border: 1px solid green
+	border-color: transparent
+
+@mixin borderRed
+	border: 1px solid red
+	border-color: transparent
+
+
+// general
+@mixin wrapping
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+
+@mixin flexEnabled
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	-webkit-display: flex
+	-moz-display: flex
+	-ms-display: flex
+	-o-display: flex
+	display: flex
+
+// screen resolution
+$resolution-800: 800px
+$resolution-640: 640px
+$resolution-480: 480px

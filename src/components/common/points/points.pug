@@ -1,0 +1,16 @@
+block point
+  mixin points(fillPoints)
+
+    //- protection against the fool
+    if (fillPoints > 12)
+      - fillPoints = 12
+
+    - var empty = 12 - fillPoints
+
+    //- active skills points
+    - for (let i = 0; i < fillPoints; i++)
+      .bar__point
+
+    //- empty skills points
+    - for (let i = 0; i < empty; i++)
+      .bar__point.bar__point-empty

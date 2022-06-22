@@ -1,0 +1,120 @@
+block chapter
+
+  //- svg:
+  mixin svgProfile
+    svg(width='120px', height='120px')
+      circle(r='56', cx='58', cy='50.7%', fill='none', stroke='#056cb4', stroke-width='2')
+      circle(r='50', cx='58', cy='50.7%', fill='#056cb4')
+      circle(r='14', cx='58', cy='42%', fill='white')
+      defs
+        clippath#cut-off-bottom
+          rect(x='0', y='0', width='200', height='85')
+      circle(cx='58', cy='85', r='25', fill='white', clip-path='url(#cut-off-bottom)')
+  
+  mixin svgEducation
+    svg(width='120px', height='120px')
+      circle(r='56', cx='58', cy='50.7%', fill='none', stroke='#056cb4', stroke-width='2')
+      circle(r='50', cx='58', cy='50.7%', fill='#056cb4')
+      g(transform='translate(20,98) scale(0.100000,-0.100000)', fill='white', stroke='none', x='12', y='-10')
+        path(d='M329 573 l-44 -128 -144 -3 -143 -3 108 -75 c60 -42 112 -79 \
+            117 -83 4 -4 -13 -66 -37 -137 -24 -71 -43 -130 -42 -131 1 -1 \
+            52 34 114 77 62 44 116 80 120 80 4 -1 57 -36 117 -79 61 -43 \
+            111 -78 112 -77 2 2 -17 61 -41 132 l-43 130 113 80 113 79\
+            -141 5 -141 5 -41 122 c-23 67 -44 124 -47 128 -4 3 -26 -52 \
+            -50 -122z')
+
+  mixin svgExperience
+    svg(width='120px', height='120px')
+      circle(r='56', cx='58', cy='50.7%', fill='none', stroke='#056cb4', stroke-width='2')
+      circle(r='50', cx='58', cy='50.7%', fill='#056cb4')
+      g(transform='translate(28,93) scale(0.100000,-0.100000)', fill='white', stroke='none', x='12', y='-10')
+        path(d='M240 578 c-35 -18 -50 -34 -70 -75 l-25 -51 -65 -4 -65 -3 0\
+            -215 0 -215 300 0 300 0 0 215 0 215 -66 3 c-64 3 -67 4 -72 31 -13 \
+            62 -90 121 -159 121 -19 0 -54 -10 -78 -22z m130 -43 c25 -13 60 -60 \
+            60 -80 0 -3 -52 -5 -115 -5 -63 0 -115 2 -115 5 0 4 7 19 15 35 28 \
+            55 98 75 155 45z')
+
+  mixin svgSoftware
+    svg(width='120px', height='120px')
+      circle(r='56', cx='58', cy='50.7%', fill='none', stroke='#056cb4', stroke-width='2')
+      circle(r='50', cx='58', cy='50.7%', fill='#056cb4')
+      g(transform='translate(22,86) scale(0.100000,-0.100000)', fill='white', stroke='none', x='12', y='-10')
+        path(d='M125 519 c-41 -23 -45 -38 -45 -174 0 -186 -18 -175 277 -175 \
+          298 0 278 -12 278 174 0 192 17 180 -268 183 -150 2 -228 -1 -242 \
+          -8z m459 -45 c13 -12 16 -39 16 -126 0 -158 16 -148 -245 -148 -151 \
+          0 -214 3 -223 12 -17 17 -17 249 0 266 9 9 73 12 224 12 180 0 215 \
+          -2 228 -16z')
+        path(d='M47 65 c-15 -25 -27 -48 -27 -50 0 -3 151 -5 335 -5 184 0 335 \
+          3 335 6 0 3 -12 25 -26 50 l-26 44 -282 0 -281 0 -28 -45z')
+
+  mixin svgContact
+    svg(width='120px', height='120px')
+      circle(r='56', cx='58', cy='50.7%', fill='none', stroke='#056cb4', stroke-width='2')
+      circle(r='50', cx='58', cy='50.7%', fill='#056cb4')
+      g(transform='translate(28,92) scale(0.076000,-0.076000)', fill='white', stroke='none', x='12', y='-10')
+        path(d='M72 696 c-79 -81 -82 -91 -58 -182 54 -203 298 -446 501 -498 \
+          92 -25 100 -23 172 46 77 74 89 94 73 113 -16 19 -181 115 -197 \
+          115 -7 0 -30 -16 -51 -35 l-39 -34 -40 20 c-52 25 -179 156 -199 \
+          204 -15 37 -15 38 15 69 17 18 31 37 31 44 0 17 -78 173 -98 195 \
+          -8 9 -20 17 -27 17 -6 0 -44 -33 -83 -74z')
+
+  mixin svgSkills
+    svg(width='120px', height='120px')
+      circle(r='56', cx='58', cy='50.7%', fill='none', stroke='#056cb4', stroke-width='2')
+      circle(r='50', cx='58', cy='50.7%', fill='#056cb4')
+      g(transform='translate(32,95) scale(0.100000,-0.100000)', fill='white', stroke='none', x='12', y='-10')
+        path(d='M145 642 c-78 -37 -125 -115 -125 -209 0 -68 27 -129 76 -172\
+          19 -17 34 -38 34 -46 0 -9 13 -30 29 -46 26 -25 37 -29 88 -29 \
+          69 0 97 16 113 65 6 19 24 44 40 55 42 30 80 113 80 176 0 69 \
+          -40 145 -98 188 -39 27 -53 31 -120 34 -59 2 -87 -2 -117 -16z')
+        path(d='M147 92 c-45 -49 -3 -82 103 -82 82 0 120 16 120 50 0 35 -38 \
+          50 -126 50 -66 0 -84 -3 -97 -18z')
+
+
+  //- title with svg:
+  mixin chapter(title, index)
+    .chapter
+      case index
+        when 1: .chapter__logo.chapter__logo-profile
+          +svgProfile
+
+        when 2: .chapter__logo.chapter__logo-education          
+          +svgEducation
+
+        when 3: .chapter__logo.chapter__logo-experience          
+          +svgExperience
+
+        when 4: .chapter__logo.chapter__logo-software          
+          +svgSoftware
+        
+        when 5: .chapter__logo.chapter__logo-contact          
+          +svgContact
+        
+        when 6: .chapter__logo.chapter__logo-skills          
+          +svgSkills
+
+        default
+            .chapter__logo.chapter__logo-profile
+                +svgProfile
+
+      .chapter__list
+        if (title === 'profile')
+          p.chapter__profile= title
+
+        if (title === 'education')
+          p.chapter__education= title
+
+        if (title === 'experience')
+          p.chapter__experience= title
+
+        if (title === 'software')
+          p.chapter__software= title
+
+        if (title === 'contact')
+          p.chapter__contact= title
+
+        if (title === 'skills')
+          p.chapter__skills= title
+
+      .chapter__side
+        .chapter__side-line

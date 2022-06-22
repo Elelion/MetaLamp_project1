@@ -1,0 +1,21 @@
+mixin aboutList(props)
+  -var props = props || {}
+  -var name = props.name || 'Constantine Of Constantinople'
+  -var surname = props.surname || 'surname'
+  -var profession = props.profession || 'graphic designer'
+
+  //-
+
+  section.about
+    .about__logo
+      .about__circle-wrapper
+        .about__circle-photo
+          img(src="./src/assets/images/avatar.jpeg", alt="")
+
+    .about__list
+      .about__name
+        h1.about__name-title= name
+      .about__surname
+        h2.about__surname-title= surname
+      .about__profession
+        h3.about__profession-title= profession

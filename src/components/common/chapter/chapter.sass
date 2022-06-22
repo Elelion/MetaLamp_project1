@@ -1,0 +1,71 @@
+@import ../../../mixins
+
+/**/
+
+.chapter
+	@include flexEnabled
+	height: 12rem
+	width: auto
+	margin-left: 0
+	@include borderGreen
+
+	&__logo
+		@include borderRed
+		height: auto
+		width: 11.6rem
+		margin-left: 9rem
+
+		& svg
+			width: 12rem
+			height: 12rem
+
+	&__list
+		float: left
+		@include flexEnabled
+		height: auto
+		width: auto
+		@include fontFamilyBold
+		font-size: 6rem
+		text-transform: uppercase
+		text-align: left
+		@include borderBlack
+		color: #056cb4
+		justify-content: center
+		flex-direction: column
+
+		@media screen and (max-width: $resolution-800)
+			font-size: 4rem
+
+		@media screen and (max-width: $resolution-640)
+			font-size: 3rem
+
+		@media screen and (max-width: $resolution-480)
+			display: none
+
+	&__side
+		@include flexEnabled
+		height: auto
+		width: 100%
+		min-width: 5rem
+		float: left
+		margin-right: 2rem
+		@include borderBlack
+		justify-content: center
+		flex-direction: column
+
+		@media screen and (max-width: $resolution-640)
+			min-width: 2rem
+
+		@media screen and (max-width: $resolution-480)
+			margin-left: 2rem
+			transition: 1s
+
+		&-line
+			background: #056CB4
+			width: 99%
+			height: 0.8rem
+			margin: 0 0.4rem 0 0.4rem
+
+/**/
+
+@import chapter-additional

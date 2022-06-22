@@ -1,0 +1,60 @@
+@import ../../mixins
+
+/**/
+
+.content
+	@include borderBlack
+	width: 100%
+	height: auto
+	margin: 0 auto
+
+	@media screen and (max-width: 1540px)
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		-webkit-display: flex
+		-moz-display: flex
+		-ms-display: flex
+		-o-display: flex
+		display: flex
+		flex-direction: column
+		justify-content: center
+
+	@media screen and (max-width: 600px)
+		min-width: 32rem
+
+	&__block:nth-child(1),
+	&__block:nth-child(3)
+		width: 40%
+		height: auto
+
+		@media screen and (max-width: 1540px)
+			width: auto
+
+	&__block:nth-child(2)
+		width: 59.7%
+		height: auto
+
+		@media screen and (max-width: 1540px)
+			width: auto
+
+	&__block-left
+		@include borderGreen
+		float: left
+
+		@media screen and (max-width: 1540px)
+			float: none
+
+	&__block-right
+		float: right
+		@include borderGreen
+
+		@media screen and (max-width: 1540px)
+			float: none
+
+	@media screen and (max-width: 1540px)
+		&__block-top,
+		&__block-bottom,
+		&__block-center
+			float: none

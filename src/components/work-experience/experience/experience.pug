@@ -1,0 +1,26 @@
+mixin experienceList(props)
+  -var props = props || {}
+  -var paragraph = props.paragraph || 'Constantine Of Constantinople'
+  -var comment = props.comment || 'Feb 2011 - Jun 2014'
+  -var description = props.description || 'Your job here'
+  -
+    var mockText =
+      'Lorem ipsum dolors sit amet, consectetuer adipiscing ' +
+      'elit. Aenean commodo ligula eget dolor. Aenean massa. ' +
+      'Cum sociis natoque penatibus et magnis dis parturient ' +
+      'montes, nascetur ridiculus mus. Donec quam felis, ' +
+      'ultricies nec, pellentesque.'
+  -var text = props.text || mockText
+
+  //-
+
+  section.experience
+    +chapter('experience', 3)
+
+    .work-experience__content
+      each item in props
+        .work-experience__wrapper
+          span.work-experience__content-paragraph= paragraph
+          p.work-experience__content-comment= '// ' + comment
+          p.work-experience__content-description= description
+          p.work-experience__content-text= text
